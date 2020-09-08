@@ -6,6 +6,6 @@ package h01;
 public class HalloRocDev {
 
     public static void main(String[] args) {
-        System.out.println("Ik ben Bram");
+        System.out.println("Jij bent Bram");
     }
 }
