@@ -4,51 +4,58 @@ import java.awt.*;
 import java.applet.Applet;
 
 public class PraktijkOpdracht2 extends Applet {
-    int KgValerie;
-    int KgHans;
-    int KgJeroen;
+
+    Color opvulkleur;
+    Color lijnkleur;
+    int breedte;
+    int hoogte;
 
     public void init() {
-        KgValerie = 40;
-        KgHans = 80;
-        KgJeroen = 100;
+        opvulkleur = Color.MAGENTA;
+        lijnkleur = Color.black;
+        breedte = 200;
+        hoogte = 100;
     }
+
     public void paint(Graphics g) {
-
-        // Kilograms
-        g.drawString("100 kg", 10, 20);
-        g.drawString("80 kg", 10, 40);
-        g.drawString("60 kg", 10, 60);
-        g.drawString("40 kg", 10, 80);
-        g.drawString("20 kg", 10, 100);
-        g.drawString("0 kg", 10, 120);
-
-        // stafen
-
-        //Valerie
-        g.setColor(Color.pink);
-        g.fillRect(113,120-KgValerie,80, KgValerie );
+        setBackground(Color.white);
         g.setColor(Color.black);
-        g.drawString("Valerie", 130, 130);
 
-        //Hans
-        g.setColor(Color.DARK_GRAY);
-        g.fillRect(184,120-KgHans,66, KgHans );
-        g.setColor(Color.black);
-        g.drawString("Hans",204, 130);
+        //Lijn
+        g.drawLine(20, 20, 220, 20);
+        g.drawString("Lijn", 105, 40);
 
-        //Jeroen
-        g.setColor(Color.blue);
-        g.fillRect(50, 120-KgJeroen, 66, KgJeroen);
-        g.setColor(Color.black);
-        g.drawString("Jeroen",60, 130);
+        //Rechthoek
+        g.drawRect(20, 50, breedte, hoogte);
+        g.drawString("Rechthoek", 90, 165);
 
-        //lijnen
-        g.setColor(Color.black);
-        g.drawRect(50,20,199,20);
-        g.drawRect(50,40,199,20);
-        g.drawRect(50,60,199,20);
-        g.drawRect(50,80,199,20);
-        g.drawRect(50,100,199,20);
+        //Afgeronde Rechthoek
+        g.drawRoundRect(20, 170, breedte, hoogte, 30, 30);
+        g.drawString("Afgeronde Rechthoek", 60, 285);
+
+        //Gevulde rechthoek met ovaal
+        g.setColor(opvulkleur);
+        g.fillRect(240, 50, breedte, hoogte);
+        g.setColor(lijnkleur);
+        g.drawOval(240, 50, breedte, hoogte);
+        g.drawString("Gevulde rechthoek met ovaal", 260, 165);
+
+        //Gevulde Ovaal
+        g.setColor(opvulkleur);
+        g.fillOval(240, 170, breedte, hoogte);
+        g.setColor(lijnkleur);
+        g.drawString("Gevulde ovaal", 300, 285);
+
+        //Taartpunt met ovaal eromheen
+        g.setColor(opvulkleur);
+        g.fillArc(460, 50, breedte, hoogte, 0, 45);
+        g.setColor(lijnkleur);
+        g.drawOval(460, 50, breedte, hoogte);
+        g.drawString("Taartpunt met ovaal eromheen", 480, 165);
+
+        //Cirkel
+        g.setColor(lijnkleur);
+        g.drawArc(510, 170, hoogte, hoogte, 0, 360);
+        g.drawString("Cirkel", 545, 285);
     }
 }
