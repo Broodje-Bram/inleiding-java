@@ -22,11 +22,11 @@ public class Show4 extends Applet {
         g.drawLine(350, 125, 550, 40);
 
         //Huis Deur
-        g.drawRect(550, 325, 50, 100);
+        g.drawRect(525, 325, 50, 100);
 
         //Raam
-        g.drawRect(430, 200, 100, 100);
-
+        g.drawRect(430, 200, 70, 70);
+        g.drawRect(600, 200, 70, 70);
 
     }
 
