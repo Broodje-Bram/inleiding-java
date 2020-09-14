@@ -3,7 +3,6 @@ package H08;
 import java.awt.*;
 import java.applet.Applet;
 import java.awt.event.*;
-import java.lang.reflect.GenericArrayType;
 
 public class H08_PraktijkOpdracht extends Applet {
     TextField tekstvak;
