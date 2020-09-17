@@ -1,0 +1,43 @@
+package H10;
+
+import java.awt.*;
+import java.applet.Applet;
+import java.awt.event.*;
+
+public class H10_2 extends Applet {
+    int cijfers, uitkomst, uitkomstlaag;
+    TextField tekstvak;
+
+    public void init() {
+        tekstvak = new TextField(50);
+        tekstvak.addActionListener( new VakListener() );
+
+        add( tekstvak );
+        uitkomst = 0;
+        uitkomstlaag = 0;
+    }
+
+    public void paint(Graphics g) {
+        g.setFont(new Font ("Default", Font.BOLD, 15 ));
+        setBackground(Color.CYAN);
+        g.setColor(Color.red);
+        g.drawString(String.valueOf(uitkomst), 200, 45);
+        g.drawString(String.valueOf(uitkomstlaag), 200, 65);
+    }
+
+    class VakListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            String s;
+
+            s = tekstvak.getText();
+            cijfers = Integer.parseInt( s );
+            if (cijfers > uitkomst) {
+                uitkomst = cijfers;
+            }
+            if (uitkomstlaag == 0) uitkomstlaag = cijfers;
+            if (uitkomstlaag > cijfers) uitkomstlaag = cijfers;
+            repaint();
+        }
+    }
+
+}
