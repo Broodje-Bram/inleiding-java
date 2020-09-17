@@ -14,16 +14,20 @@ public class H08_PraktijkOpdracht extends Applet {
     public void init() {
         tekstvak = new TextField("", 10);
         Cijfers = new TextField("", 10);
+
         add(tekstvak);
         add(Cijfers);
+
         Keerknop = new Button("*");
-        Keerknop.addActionListener( new KeerKnopListener() );
         MinKnop = new Button("-");
-        MinKnop.addActionListener( new MinKnopListener() );
         GedeeldKnop = new Button("/");
-        GedeeldKnop.addActionListener( new GedeeldKnopListener());
         PlusKnop = new Button("+");
+
         PlusKnop.addActionListener( new PlusKnopListener());
+        GedeeldKnop.addActionListener( new GedeeldKnopListener());
+        MinKnop.addActionListener( new MinKnopListener() );
+        Keerknop.addActionListener( new KeerKnopListener() );
+
         add(Keerknop);
         add(GedeeldKnop);
         add(PlusKnop);

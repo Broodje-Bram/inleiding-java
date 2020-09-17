@@ -4,8 +4,6 @@ import java.awt.*;
 import java.applet.Applet;
 
 public class Dobblesteen extends Applet {
-    public void init() {
-    }
     public void paint(Graphics g) {
         setBackground(Color.MAGENTA);
         g.setColor(Color.white);
