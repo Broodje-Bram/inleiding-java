@@ -11,6 +11,5 @@ public class H11_8 extends Applet {
             g.drawOval (x, y, 2*radius, 2*radius);
             radius -= 4;
         } while (radius > 0);
-
     }
 }
