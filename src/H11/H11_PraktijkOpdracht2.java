@@ -29,7 +29,7 @@ public class H11_PraktijkOpdracht2 extends Applet {
             teller++;
             repaint();
             if (teller>10){
-                teller = 0;
+                teller = 1;
             }
             switch(teller) {
                 case 1:
