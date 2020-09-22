@@ -10,7 +10,7 @@ public class H10_2 extends Applet {
 
     public void init() {
         tekstvak = new TextField(50);
-        tekstvak.addActionListener( new VakListener() );
+        tekstvak.addActionListener( new VakListener() );tekstvak.addActionListener( new VakListener() );
 
         add( tekstvak );
         uitkomst = 0;

@@ -5,6 +5,7 @@ import java.applet.Applet;
 
 public class H11_8 extends Applet {
     public void paint (Graphics g) {
+        setBackground(Color.CYAN);
         int radius = 400, width = 1800, height = 1000;
         do {
             int x=width/2-radius, y=height/2-radius;
