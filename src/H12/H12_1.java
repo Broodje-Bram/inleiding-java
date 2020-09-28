@@ -1,7 +1,5 @@
 package H12;
 
-import com.sun.javafx.scene.traversal.WeightedClosestCorner;
-
 import java.awt.*;
 import java.applet.Applet;
 

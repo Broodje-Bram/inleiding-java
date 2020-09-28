@@ -17,6 +17,10 @@ public class H10_5 extends Applet {
         knop.addActionListener(new knoplistener());
         add(knop);
         add(tekstvak);
+
+        tekst = "";
+        geslaagd = "";
+
     }
 
     public void paint(Graphics g){
