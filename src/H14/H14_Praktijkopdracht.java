@@ -29,7 +29,6 @@ public class H14_Praktijkopdracht extends Applet {
         path = H14_Praktijkopdracht.class.getResource("/H14/resources/");
         burger = getImage(path, "Hamburger.jpg");
 
-        //Knoppen
         play = new Button("Play");
         reset = new Button("Reset");
         tekstveld = new TextField("",10);
