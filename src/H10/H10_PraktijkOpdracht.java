@@ -119,18 +119,19 @@ public class H10_PraktijkOpdracht extends Applet {
             g.drawLine(230,300,280,280);
         }
         else if(getal>7){
+            drawSmiley(Color.green, g);
             // Oval for face outline
-            g.setColor(Color.YELLOW);
-            g.fillOval(180, 170, 150, 150);
+            //g.setColor(Color.green);
+            //g.fillOval(180, 170, 150, 150);
 
             // Ovals for eyes
             // with black color filled
-            g.setColor(Color.BLACK);
-            g.fillOval(220, 220, 15, 15);
-            g.fillOval(270, 220, 15, 15);
+            //g.setColor(Color.BLACK);
+            //g.fillOval(220, 220, 15, 15);
+            //g.fillOval(270, 220, 15, 15);
 
             // Arc for the smile
-            g.drawArc(230, 280, 50, 20, 180, 180);
+            //g.drawArc(230, 280, 50, 20, 180, 180);
         }
 
         g.setFont(new Font ("Default", Font.BOLD, 15 ));
@@ -138,4 +139,19 @@ public class H10_PraktijkOpdracht extends Applet {
         g.setColor(Color.red);
         g.drawString("" + getal + beoordeling, 20, 80);
     }
+    private void drawSmiley (Color color, Graphics g){
+        g.setColor(color);
+        g.fillOval(180, 170, 150, 150);
+
+        // Ovals for eyes
+        // with black color filled
+        g.setColor(Color.BLACK);
+        g.fillOval(220, 220, 15, 15);
+        g.fillOval(270, 220, 15, 15);
+
+        // Arc for the smile
+        g.drawArc(230, 280, 50, 20, 180, 180);
+    }
+
+
 }
