@@ -1,4 +1,4 @@
-package h01;
+package H01;
 
 /**
  * Created by piet on 31-08-16.
