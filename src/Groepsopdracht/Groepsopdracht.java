@@ -9,8 +9,8 @@ public class Groepsopdracht extends Applet {
     TextField tekstvak;
     Button knop;
     Label label;
-    String s;
-    int b,q;
+    String inputTekstvak;
+    int cijferTransformatie,som;
 
     public void init() {
         tekstvak = new TextField("", 5);
@@ -18,8 +18,7 @@ public class Groepsopdracht extends Applet {
         label = new Label("Voer hier u Cijfer in");
 
         knop.addActionListener(new knopListener());
-        s = "";
-        q = 0;
+        inputTekstvak = "";
 
         knop.setBackground(Color.RED);
 
@@ -29,20 +28,34 @@ public class Groepsopdracht extends Applet {
     }
 
     public void paint(Graphics g) {
-        for (int i = 1; i <= b; i++) {
-            if (i%2<=0){
-                g.drawString("" + i, 50,50+i*10);
+        som = 0;
+
+        for (int i = 1; i <= cijferTransformatie; i++) {
+            if (i%2==0){
+                if (i%6==0){
+                    som+=i*i;
+                    g.drawString(""+i*i,50,50+i*10);
+                }
+                else {
+                    som+=i;
+                    g.drawString("" + i, 50,50+i*10);
+                }
             }
-            if (i==b){
-                g.drawString("Totaal " ,50,50+i*15);
+            if (i== cijferTransformatie){
+                g.drawString("Totaal "+ som ,50,50+i*15);
             }
         }
     }
 
     class knopListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            s = tekstvak.getText();
-            b = Integer.parseInt( s );
+            inputTekstvak = tekstvak.getText();
+            try {
+                cijferTransformatie = Integer.parseInt( inputTekstvak );
+            }
+            catch (Exception Gert){
+                cijferTransformatie = 0;
+            }
             repaint();
         }
     }
